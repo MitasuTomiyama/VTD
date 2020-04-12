@@ -3,4 +3,8 @@ class Artist < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  # artの親
+  has_many :arts, dependent: :destroy
+  
 end
