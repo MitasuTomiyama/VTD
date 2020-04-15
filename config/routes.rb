@@ -1,31 +1,9 @@
 Rails.application.routes.draw do
-  get 'comments/create'
-  get 'comments/destroy'
-  get 'likes/create'
-  get 'likes/destroy'
-  get 'arts/new'
-  get 'arts/index'
-  get 'arts/show'
-  get 'arts/create'
-  get 'arts/edit'
-  get 'arts/update'
-  get 'arts/delete'
-  get 'artists/new'
-  get 'artists/index'
-  get 'artists/show'
-  get 'artists/edit'
-  get 'artists/create'
-  get 'artists/update'
-  get 'artists/delete'
-  get 'users/new'
-  get 'users/index'
-  get 'users/show'
-  get 'users/edit'
-  get 'users/create'
-  get 'users/update'
-  get 'users/delete'
+  
   devise_for :admins
   devise_for :artists
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  
 end

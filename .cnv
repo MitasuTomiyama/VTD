@@ -1,0 +1,4 @@
+DB_USERNAME="Mitasu Tomiyama"
+DB_PASSWORD="Okinawa58"
+DB_HOST="rds-mysql-server.c9idtt6yxnf4.ap-northeast-1.rds.amazonaws.com"
+DB_DATABASE="rds-mysql-server"

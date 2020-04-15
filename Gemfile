@@ -69,3 +69,8 @@ gem 'pry-byebug'
 gem 'jquery-rails'
 gem 'bxslider-rails'
 gem 'streamio-ffmpeg'
+
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
