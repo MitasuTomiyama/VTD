@@ -29,19 +29,19 @@ Rails.application.routes.draw do
   devise_for :users
   
   # ユーザーのルーティング
-  resources :users, only: [:index, :show, :update, :edit, :delete] 
+  resources :users, only: [:index, :show, :update, :edit, :destroy] 
 
   # アーティストのルーティング
-  resources :artists, only: [:index, :show, :update, :edit, :delete]
+  resources :artists, only: [:index, :show, :update, :edit, :destroy]
 
   # アートのルーティング
   resources :arts
 
   # コメントのルーティング
-  resources :comments, only: [:index, :create, :update, :delete]
+  resources :comments, only: [:index, :create, :update, :destroy]
 
   # ライクのルーティング
-  resources :likes, only: [:update, :delete]
+  resources :likes, only: [:update, :destroy]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html  
 end
