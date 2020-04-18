@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-  def create
+  def update
   end
 
   def destroy
