@@ -4,7 +4,7 @@ class Art < ApplicationRecord
     belongs_to :artist
 
     #Likeモデルの親
-    has_many :likes, dependent: :destroy
+    has_many :favorites, dependent: :destroy
 
     #Commentモデルの親
     has_many :comments, dependent: :destroy

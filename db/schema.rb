@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 2020_04_09_092312) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "likes", force: :cascade do |t|
+  create_table "favorites", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "art_id", null: false
     t.datetime "created_at", null: false

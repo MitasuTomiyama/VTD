@@ -1,6 +1,6 @@
-class CreateLikes < ActiveRecord::Migration[5.2]
+class CreateFavorites < ActiveRecord::Migration[5.2]
   def change
-    create_table :likes do |t|
+    create_table :favorites do |t|
 
       t.integer :user_id, null: false
       t.integer :art_id, null: false

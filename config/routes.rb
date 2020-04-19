@@ -40,8 +40,8 @@ Rails.application.routes.draw do
   # コメントのルーティング
   resources :comments, only: [:index, :create, :update, :destroy]
 
-  # ライクのルーティング
-  resources :likes, only: [:update, :destroy]
+  # フェイバリットのルーティング
+  resources :favorites, only: [:index, :create, :destroy]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html  
 end

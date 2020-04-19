@@ -1,4 +1,4 @@
-class Like < ApplicationRecord
+class Faorite < ApplicationRecord
 
     #Userの子モデル
     belongs_to :user
