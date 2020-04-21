@@ -19,6 +19,7 @@ class UsersController < ApplicationController
     else
       @user = @user
       render action: :edit
+    end
   end
 
   def destroy
@@ -30,4 +31,5 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:name, :introduction, :image_id)
+  end
 end
