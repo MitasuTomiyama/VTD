@@ -13,6 +13,8 @@
   <p><% @artist.career %></p>
 </div>
 
-<% if @artist == curent_artist? %>
+<div>
+<%# <% if @artist.id == current_artist.id? %> 
   <%= link_to 'edit', edit_artist_path(@artist) %>
-<% end %>
+<%# <% end %> 
+</div>
