@@ -11,6 +11,7 @@ class Art < ApplicationRecord
 
     # CarrierWaveを宣言
     mount_uploader :image, ImageUploader
+    mount_uploader :video, VideoUploader
 
     def favorited_by?(user)
         favorites.where(user_id: user.id).exists?
