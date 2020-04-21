@@ -1,2 +1,11 @@
-<h1>Arts#index</h1>
-<p>Find me in app/views/arts/index.html.erb</p>
+
+<% @arts.each do |arts| %>
+
+  <%= link_to art_path(arts) do %>
+      <img src='<%= art.image_id %>' >
+  <% end %>
+
+  <%= arts.name %><br>
+  <%= arts.artist.name %>
+
+<% end %>
