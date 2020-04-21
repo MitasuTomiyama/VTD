@@ -6,5 +6,8 @@ class Artist < ApplicationRecord
 
   # artの親
   has_many :arts, dependent: :destroy
+
+  # CarrierWaveを宣言
+  mount_uploader :image, ImageUploader
   
 end
