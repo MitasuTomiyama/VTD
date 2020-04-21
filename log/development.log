@@ -1590,3 +1590,37 @@ Processing by ArtistsController#index as HTML
 Completed 200 OK in 53ms (Views: 49.8ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 10.0.2.2 at 2020-04-21 08:16:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.5.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.5.0/gems/railties-5.2.4.2/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 17ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 08:17:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  Rendered artists/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/Portfolio/VTD/app/views/artists/index.html.erb:18: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/artists/index.html.erb:18: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 08:18:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 426ms (Views: 421.1ms | ActiveRecord: 1.9ms)
+
+
