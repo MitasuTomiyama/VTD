@@ -11,5 +11,29 @@
 
   <body>
     <%= yield %>
+
+    <footer>
+      <h1 class="icon-VTD">VTD</h1>
+
+      <%# ハンバーガーメニューの内容 %>
+      <div id="sp-menu">
+        <ul>
+          <li><a href="#">museum</a></li>
+          <li><a href="#">artist</a></li>
+          <li><a href="#">my Gallery</a></li>
+          <li><a href="#">about</a></li>
+        </ul>
+      </div>
+
+      <%# ハンバーガーメニュー %>
+      <div id="hm-icon">
+        <a class="menu-trigger" href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+    </footer>
+    <%= javascript_include_tag 'application.js' %>
   </body>
 </html>
