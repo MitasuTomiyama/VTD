@@ -1624,3 +1624,433 @@ Processing by ArtistsController#index as HTML
 Completed 200 OK in 426ms (Views: 421.1ms | ActiveRecord: 1.9ms)
 
 
+Started GET "/artists/1" for 10.0.2.2 at 2020-04-21 10:49:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:8
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (169.4ms)
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `curent_artist?' for #<#<Class:0x000055f77226d508>:0x000055f7722c2bc0>):
+    14: </div>
+    15: 
+    16: <div>
+    17: <% if @artist == curent_artist? %>
+    18:   <%= link_to 'edit', edit_artist_path(@artist) %>
+    19: <% end %>
+    20: </div>
+  
+app/views/artists/show.html.erb:17:in `_app_views_artists_show_html_erb__820888282069883690_47260630220240'
+Started GET "/artists/1" for 10.0.2.2 at 2020-04-21 10:49:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:8
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (121.3ms)
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `current_artist?' for #<#<Class:0x000055f77226d508>:0x00007f4320025d90>):
+    14: </div>
+    15: 
+    16: <div>
+    17: <% if @artist == current_artist? %>
+    18:   <%= link_to 'edit', edit_artist_path(@artist) %>
+    19: <% end %>
+    20: </div>
+  
+app/views/artists/show.html.erb:17:in `_app_views_artists_show_html_erb__820888282069883690_69963138282380'
+Started GET "/artists/1" for 10.0.2.2 at 2020-04-21 11:02:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:8
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `id?' for nil:NilClass):
+    14: </div>
+    15: 
+    16: <div>
+    17: <% if @artist.id == current_artist.id? %>
+    18:   <%= link_to 'edit', edit_artist_path(@artist) %>
+    19: <% end %>
+    20: </div>
+  
+app/views/artists/show.html.erb:17:in `_app_views_artists_show_html_erb__820888282069883690_69963115349140'
+Started GET "/artists/1" for 10.0.2.2 at 2020-04-21 11:05:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:8
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 363ms (Views: 359.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists/1/edit" for 10.0.2.2 at 2020-04-21 11:05:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find' for nil:NilClass):
+  
+app/controllers/artists_controller.rb:12:in `edit'
+Started GET "/artists/1" for 10.0.2.2 at 2020-04-21 11:06:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:8
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 53ms (Views: 49.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artists/1/edit" for 10.0.2.2 at 2020-04-21 11:06:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find' for nil:NilClass):
+  
+app/controllers/artists_controller.rb:12:in `edit'
+Started GET "/artists/1/edit" for 10.0.2.2 at 2020-04-21 11:07:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:12
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 345ms (Views: 317.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/top" for 10.0.2.2 at 2020-04-21 11:12:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#top as HTML
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2689ms (Views: 2683.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:12:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 78ms (Views: 72.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:13:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 2569ms (Views: 2560.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:14:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 2604ms (Views: 2594.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:15:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 2683ms (Views: 2673.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:16:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 2620ms (Views: 2610.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/artists/1" for 10.0.2.2 at 2020-04-21 11:17:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/artists_controller.rb:8
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (1.4ms)
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:17:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 2738ms (Views: 2710.6ms | ActiveRecord: 2.9ms)
+
+
+Completed 200 OK in 2403ms (Views: 2401.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:35:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 2701ms (Views: 2691.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:39:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 661ms (Views: 658.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:40:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 2704ms (Views: 2693.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:42:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 673ms (Views: 669.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:43:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 654ms (Views: 651.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:43:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 66ms (Views: 63.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:48:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 671ms (Views: 668.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:49:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 696ms (Views: 693.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:49:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 653ms (Views: 650.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:49:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 689ms (Views: 686.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:49:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 685ms (Views: 682.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:52:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 689ms (Views: 686.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:53:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 709ms (Views: 705.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:54:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 671ms (Views: 667.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:56:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 680ms (Views: 678.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 11:57:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 703ms (Views: 700.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 12:01:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 57ms (Views: 54.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 12:01:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 674ms (Views: 671.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 12:20:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 676ms (Views: 671.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 12:21:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 683ms (Views: 680.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists" for 10.0.2.2 at 2020-04-21 12:24:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:2
+  Rendered artists/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 679ms (Views: 676.6ms | ActiveRecord: 0.4ms)
+
+
