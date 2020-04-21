@@ -1,2 +1,18 @@
-<h1>Artists#show</h1>
-<p>Find me in app/views/artists/show.html.erb</p>
+
+<div>
+  <% if @artist.image? %>
+    <img src='<%= @artist.image_id %>' >
+  <% else %>
+    <image src="/assets/no_image.png" >
+  <% end %>
+</div>
+
+<span><% @artist.name %></span>
+
+<div>
+  <p><% @artist.career %></p>
+</div>
+
+<% if @artist == curent_artist? %>
+  <%= link_to 'edit', edit_artist_path(@artist) %>
+<% end %>
