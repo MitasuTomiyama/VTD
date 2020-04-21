@@ -1,2 +1,11 @@
-<h1>Artists#index</h1>
-<p>Find me in app/views/artists/index.html.erb</p>
+
+<% @artists.each do |artist| %>
+
+  <%= link_to artist_path(artist) do %>
+    <%# <%= attachment_image_tag artist, :image, :fill, 100, 100, fallback: "no_image.png", size: '100x100'%>
+    <%= image_tag artist.image_id.to_s, fallback: "no_image.png", size: '100x100' %>
+  <% end %>
+
+  <%= artist.name %>
+
+<% end %>
