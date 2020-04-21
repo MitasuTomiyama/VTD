@@ -22,11 +22,14 @@ Rails.application.routes.draw do
     sessions: 'artists/sessions'
   }
   devise_scope :artists do
-    get '/artists/items/top' => 'artists/items#top'
+    get '/artists/top' => 'artists#top'
   end
 
   # ユーザー側のログイン•サインイン
   devise_for :users
+  devise_scope :users do
+    get '/users/top' => 'users#top'
+  end
   
   # ユーザーのルーティング
   resources :users, only: [:index, :show, :update, :edit, :destroy] 
