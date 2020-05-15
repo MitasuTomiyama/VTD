@@ -13,8 +13,8 @@ class ArtistsController < ApplicationController
   end
 
   def update
-    artist = current_artist.find(params[:id])
-    if artist.update(artist_params)
+    artist = current_artist
+    if artist.update(params[:id])
       # flash[:notice]
       redirect_to artist_path
     else
@@ -28,7 +28,7 @@ class ArtistsController < ApplicationController
 
   private
   def artist_params
-    params.require(:artist).parmit(:name, :career, :image_id)
+    params.require(:artist).permit(:id, :name, :career, :image_id)
   end
   
 end
