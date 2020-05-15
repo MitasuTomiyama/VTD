@@ -13,12 +13,12 @@ class ArtistsController < ApplicationController
   end
 
   def update
-    artist = current_artist
-    if artist.update(params[:id])
+    @artist = current_artist
+    if @artist.update(artist_params)
       # flash[:notice]
-      redirect_to artist_path
+      redirect_to artist_path(@artist)
     else
-      @artist = artist
+      @artist = @artist
       render action: :edit
     end
   end
