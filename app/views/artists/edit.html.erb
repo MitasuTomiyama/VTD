@@ -2,3 +2,30 @@
 
 <%= form_with model: @artist do |artist| %>
   
+  <%# artistプロフィール画像編集 %>
+  <div>
+    <% if @artist.image? %>
+      <img src='<%= @artist.image_id %>'>
+    <% else %>
+      <image src="/assets/no_image.png">
+    <% end %>
+    <%= artist.label :image_id %>
+    <%= artist.file_field :image_id %>
+  </div>
+
+  <%# artist_name 編集 %>
+  <div>
+    <span>name</span>
+    <%= artist.text_field :name %>
+  </div>
+
+  <%# artist_career 編集 %>
+  <div>
+    <span>career</span>
+    <%= artist.text_field :career %>
+  </div>
+
+  <%# submitボタン %>
+  <%= artist.submit %>
+
+<% end %>
