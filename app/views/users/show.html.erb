@@ -1,2 +1,20 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+
+<div>
+  <% if @user.image? %>
+    <img src='<%= @user.image_id %>'>
+  <% else %>
+    <image src="/assets/no_image.png"></image>
+  <% end %>
+</div>
+
+<div>
+  <span><%= @user.name %></span>
+</div>
+
+<div>
+  <p><%= @user.introduction %></p>
+</div>
+
+<div>
+  <%= link_to 'edit', edit_user_path(@user) %>
+</div>
