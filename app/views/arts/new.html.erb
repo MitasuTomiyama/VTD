@@ -1,2 +1,25 @@
-<h1>Arts#new</h1>
-<p>Find me in app/views/arts/new.html.erb</p>
+<h2>New</h2>
+
+<%= form_with model: @art do |art| %>
+
+  <div>
+    <%# アートを画像形式か映像形式で登録 %>
+    <%= art.label :image_id || :video_id %>
+    <%= art.file_field :image_id || :video_id %>
+  </div>
+
+  <div>
+    <%# 作品名登録 %>
+    <span>Opus</span>
+    <%= art.text_fild :opus %>
+  </div>
+
+  <div>
+    <%# 作品説明登録 %>
+    <span>Explanation</span>
+    <%= art.text_fild :explanation %>
+  </div>
+
+  <%= art.submit %>
+
+<% end %>
