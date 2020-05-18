@@ -1,2 +1,17 @@
-<h1>Arts#show</h1>
-<p>Find me in app/views/arts/show.html.erb</p>
+<%# 作品詳細 %>
+<div>
+  <% if @art.image_id == ture %>
+    <%= @art.image_id %>
+  <% else %>
+    <%= @art.video_id %>
+  <% end %>
+</div>
+
+<div>
+  <span>Opus / <%= @art.opus %></span>
+  <p>Explanation / <%= @art.explanation %></p>
+</div>
+
+<%# 作品に対するコメント %>
+<div>
+  
