@@ -1,2 +1,28 @@
-<h1>Arts#edit</h1>
-<p>Find me in app/views/arts/edit.html.erb</p>
+<h2>Edit</h2>
+
+<% form_with model: @art do |art| %>
+
+  <div>
+  <%# アート作品変更 %>
+    <%= art.label :image_id || video_id %>
+    <%= art.file_field :image_id || video_id %>
+  </div>
+
+  <div>
+  <%# 作品名変更 %>
+    <span>Opus</span>
+    <%= art.text_field :opus %>
+  </div>
+
+  <div>
+  <%# 作品説明の変更 %>
+    <span>Explanation</span>
+    <%= art.text_field :explanation %>
+  </div>
+
+  <%= art.submit, "Update" %>
+  <%# 現在のウィンドウにメッセージを表示したいから self を使った %>
+  <%= link_self "Delete", art_path, method: delete, data: {confirm: "Really?"} %>
+
+<% end %>
+
