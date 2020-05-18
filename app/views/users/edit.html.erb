@@ -1,2 +1,29 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<h2>Edit</h2>
+
+<%= form_with model: @user do |user| %>
+
+  <%# userプロフィール画像編集 %>
+  <div>
+    <% if user.image? %>
+      <img src='<%= user.image_id %>'>
+    <% else %>
+      <image src='/assets/no_image.png'></image>
+    <% end %>
+    <%= user.label :image_id%>
+    <%= user.file_field :image_id %>
+  </div>
+
+  <%# user_name　編集 %>
+  <div>
+    <%= user.text_field :name %>
+  </div>
+
+  <%# user_introduction %>
+  <div>
+    <%= user.text_field :introduction %>
+  </div>
+
+  <%# submitボタン %>
+  <%= user.submit %>
+
+<% end %>
